@@ -4,7 +4,7 @@ import moment from "moment";
 const PostDetail = ({post}) => {
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
-
+//Prüfen ob fett, kursiv oder unterstrichen!
     if (obj) {
       if (obj.bold) {
         modifiedText = (<b key={index}>{text}</b>);
@@ -18,7 +18,7 @@ const PostDetail = ({post}) => {
         modifiedText = (<u key={index}>{text}</u>);
       }
     }
-
+//nach Passenden HTML-Element prüfen und erzeugen lassen:
     switch (type) {
       case 'heading-three':
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
@@ -72,6 +72,7 @@ const PostDetail = ({post}) => {
         </div>
         </div>
           <h1 className='mb-8 text-3xl font-semibold'>{post.title} </h1>
+//Inhalte des Posts in entsprechendes HTML-Element umwandeln
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
 

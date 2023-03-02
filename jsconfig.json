@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.js", "**/*.jsx", "pages/_app.js", "components/PostCard.jsx", "components/PostCard.jsx", "components/PostWidget.jsx", "components/index.js", "components/Categories.jsx", "pages/api/comments.js.js", "pages/_app.js", "pages/index.jsx", "styles/globals.scss"],
+  "exclude": ["node_modules"]
+}
